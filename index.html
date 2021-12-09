@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./home.css">
+        <title>Ideas Gym</title>
+    </head>
+
+    <body>
+
+        <div class="col-12 header">
+            <h1 class="site-heading">
+                STEM e-learning hub
+            </h1>
+        </div>
+        <div class="row py-3">
+            <div class="col-3 px-5 sidebar">
+                <div class="list-group list-group-flush">
+                    <a href="./index.html" class="list-group-item d-flex list-group-item-action sidebar-item-active">
+                        <img src="./icons/home.svg" class="mx-2" /> Home
+                    </a>
+                    <a href="./shopping-cart.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="./icons/cart.svg" class="mx-2" /> Shopping Cart
+                    </a>
+                    <a href="./about-us.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="./icons/globe.svg" class="mx-2" /> About Us
+                    </a>
+                    <a href="./my-account.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="./icons/person.svg" class="mx-2" />My Account
+                    </a>
+                    <div class="list-group-item d-flex list-group-item-action align-items-center" data-bs-toggle="dropdown">
+                        <img src="./icons/flag-button-en.png" class="mx-2 language-icon" />Language
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Estonian</a></li>
+                        <li><a class="dropdown-item" href="#">Russian</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-9 px-4">
+
+                <div class="d-inline-flex align-items-center courses-list">
+                    <div class="px-2">
+                        <div class="filter-name"></div>
+                        <img src="./icons/search.svg" id="search-button" class="mx-2 search-button" />
+                    </div>
+                    <div class="px-2">
+                        <div class="filter-name">Subject</div>
+                        <select class="form-select" id="filter-subject">
+                            <option value="All">All</option>
+                            <option value="Robotics">Robotics</option>
+                            <option value="AI">AI</option>
+                            <option value="Programming">Programming</option>
+                          </select>
+                    </div>
+                    <div class="px-2">
+                        <div class="filter-name">Max. price</div>
+                        <input type="text" class="form-control" id="filter-price">
+                    </div>
+                    <div class="px-2">
+                        <div class="filter-name">Max. length (weeks)</div>
+                        <input type="text" class="form-control" id="filter-length">
+                    </div>
+                    <div class="dropdown px-2">
+                        <div class="filter-name">Mentoring</div>
+                        <select class="form-select" id="filter-mentor">
+                            <option value=""></option>
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                          </select>
+                    </div>
+                    <div class="dropdown px-2">
+                        <div class="filter-name">Course level</div>
+                        <select class="form-select" id="filter-level">
+                         <option value="All">All</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                      </select>
+                    </div>
+                </div>
+                <h2 class="py-5 px-3">
+                    Search Results
+                </h2>
+                <div class="row row-cols-auto" id="courses-list">
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./courses.js"></script>
+        <script>
+            document.getElementById("search-button").addEventListener("click", filterCourses);
+
+            function filterCourses() {
+                let filteredCourses = "";
+                let filterPrice = document.getElementById("filter-price").value;
+                let filterLength = document.getElementById("filter-length").value;
+                let filterSubject = document.getElementById("filter-subject").value;
+                let filterLevel = document.getElementById("filter-level").value;
+
+                for (let i = 0; i < courses.length; i++) {
+                    if ((courses[i].subject === filterSubject || filterSubject === "All") && (courses[i].price <= filterPrice || filterPrice === "") && (courses[i].duration <= filterLength || filterLength === "") && (courses[i].level === filterLevel || filterLevel === "All")) {
+                        filteredCourses += `
+                            <div class="card mx-3">
+                                <img src="` + courses[i].image + `">
+                                <div class="card-body">
+                                    <h5 class="card-title">` + courses[i].title + `</h5>
+                                    <p class="card-text">` + courses[i].subject + `</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item card-value-row">
+                                        <div>` + courses[i].price + `€</div>
+                                        <div>` + courses[i].duration + ` weeks</div>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    ` + courses[i].description + `
+                                    <a href="./course.html" class="card-link">Read more</a>
+                                </div>
+                            </div>
+                        `
+                    }
+                }
+
+                document.getElementById('courses-list').innerHTML = filteredCourses;
+            }
+
+            filterCourses();
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+.course-price-duration {
+    background-color: #B8B8B8;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 24px;
+    width: 320px;
+}
+
+.tag {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.thumbnail {
+    width: 400px;
+}
+
+.button {
+    margin-right: 8px;
+}
+
+.video-link {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.checked {
+    color: orange;
+}
+
+.logo {
+    width: 200px;
+    margin-top: 16px;
+}
+
+.company-information {
+    font-size: 18px;
+    margin-right: 160px;
+}
+
+.teacher-image-container {
+    height: 210px;
+}
+
+.teacher-image {
+    width: 100%;
+}
+
+.teacher-link {
+    text-decoration: none;
+    color: black;
+}
+
+.teacher-link:hover {
+    color: black;
+}

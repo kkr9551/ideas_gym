@@ -1,0 +1,27 @@
+.filter-name {
+    height: 32px;
+    line-height: 32px;
+}
+
+.card {
+    width: 320px;
+    background-color: #F0F0F0;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+.card-value-row {
+    background-color: #B8B8B8;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}

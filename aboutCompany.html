@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <title>Ideas Gym</title>
+
+       
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="aboutCompanyInfo.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="col-12 header">
+            <h1 class="site-heading">
+                STEM e-learning hub
+            </h1>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-3 px-5 sidebar">
+                <div class="list-group list-group-flush">
+                    <a href="./index.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="icons/home.svg" class="mx-2" /> Home
+                    </a>
+                    <a href="shopping-cart.html" class="list-group-item d-flex list-group-item-action sidebar-item-active">
+                        <img src="icons/cart.svg" class="mx-2" /> Shopping Cart
+                    </a>
+                    <a href="about-us.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="icons/globe.svg" class="mx-2" /> About Us
+                    </a>
+                    <a href="my-account.html" class="list-group-item d-flex list-group-item-action">
+                        <img src="icons/person.svg" class="mx-2" />My Account
+                    </a>
+                    <div class="list-group-item d-flex list-group-item-action align-items-center" data-bs-toggle="dropdown">
+                        <img src="./icons/flag-button-en.png" class="mx-2 language-icon" />Language
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Estonian</a></li>
+                        <li><a class="dropdown-item" href="#">Russian</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-9" style="background-color: white;">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/office.png" alt="displayP" class="col-12">
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                    <h1 style="color:black">We need you!</h1>
+                                    <p></p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/teacher.png" alt="displayP" class="col-12">
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                    <h1 style="color: black;">Work with Us!</h1>
+                                    <p></p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/child.jpeg" alt="displayP" class="col-12">
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                    <h1 style="color: white;">So easy, I got it!</h1>
+                                    <p>Have a look of children's work!</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" style="color: grey">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next" style="color: grey">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>        
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container marketing">
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-3">
+                    <h3 class="pb-4 mb-4 fst-italic">
+                        <p>
+                            <img src="images/acme_logo.png" alt="logo">
+                            <div> ACME CORPORATION</div>
+                        </p>
+                        <p>
+                            <button class="btn btn-primary" id="follow-button">+ Follow</button>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+                            <script>
+                            $(document).ready(function(){
+                                $("#follow-button").click(function(){
+                                    if ($("#follow-button").text() == "+ Follow"){
+                                        $("#follow-button").animate({ width: '-=10px' }, 100, 'easeInCubic', function () {});
+                                        $("#follow-button").animate({ width: '+=45px', left: '-=15px' }, 600, 'easeInOutBack', function () { 
+                                            $("#follow-button").css("color", "#fff");
+                                            $("#follow-button").text("Following");
+                                            $("#follow-button").animate({
+                                                backgroundColor: "#2EB82E",
+                                                borderColor: "#2EB82E"
+                                            }, 1000 );
+                                        });
+                                    }else{
+                                        $("#follow-button").animate({ width: '-=25px', left: '+=15px' }, 600, 'easeInOutBack', function () {
+                                            $("#follow-button").text("+ Follow");
+                                            $("#follow-button").css("color", "#FFFFFF");
+                                            $("#follow-button").css("background-color", "#3399FF");
+                                            $("#follow-button").css("border-color", "#3399FF");
+                                        });
+                                    }
+                                }); 
+                            });
+                            </script>
+
+                            <button class="btn btn-primary" id="contactUs">
+                                <img src="icons/envelope.svg" alt="houseIcon">
+                                <span>
+                                    Contact Us
+                                </span>   
+                            </button>
+                        </p>
+                            
+                    </h3>
+                </div>
+                
+
+                
+                <div class="col-4">
+                    
+                </div>
+
+            </div>
+            
+
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                    <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                </div>
+                <div class="col-md-7">
+                    <div class="row row-cols-auto my-5">
+                        <div class="card mx-3">
+                            <img src="./images/lego.png">
+                            <div class="card-body">
+                                <h5 class="card-title">LEGO Robots Using Virtual Robot Toolkit</h5>
+                                <p class="card-text">IdeasGym </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item card-value-row">
+                                    <div>16€</div>
+                                    <div>12 weeks</div>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                IdeasGym has partnered with Cogmation who are creators of simulation software,Virtual Robotics Toolkit that helps...
+                                <a href="./course.html" class="card-link">Read more</a>
+                            </div>
+                        </div>
+        
+                        <div class="card mx-3">
+                            <img src="./images/ai.png">
+                            <div class="card-body">
+                                <h5 class="card-title">LEGO Robots Using Virtual Robot Toolkit</h5>
+                                <p class="card-text">IdeasGym </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item card-value-row">
+                                    <div>16€</div>
+                                    <div>12 weeks</div>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                IdeasGym has partnered with Cogmation who are creators of simulation software,Virtual Robotics Toolkit that helps...
+                                <a href="./course.html" class="card-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                  <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                  <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual
+                       real-world content in place.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                  <img src="images/childLearningCoding.png" alt="child" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+                </div>
+              </div>
+          
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading">I feel so proud of being a coding teacher. <span class="text-muted">Teaching.</span></h2>
+                  <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here
+                       to give you a better view of what this would look like with some actual content. Your content.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/teacher_Coding.jpeg" alt="teacherCoding" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+                </div>
+              </div>
+        </div>
+
+        
+
+        
+
+    
+
+    
+    
+    
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        
+    </body>

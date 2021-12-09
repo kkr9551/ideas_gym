@@ -1,0 +1,24 @@
+.site-heading {
+    margin: 0;
+    font-size: 60px;
+}
+
+.header {
+    height: 240px;
+    padding-top: 80px;
+    padding-left: 90px;
+}
+
+.sidebar {
+    border-right: 1px solid #F0F0F0;
+}
+
+.sidebar-item-active,
+.sidebar-item-active:hover {
+    cursor: default;
+}
+
+.language-icon {
+    width: 18px;
+    height: 18px;
+}
